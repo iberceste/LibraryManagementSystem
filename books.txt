@@ -1,2 +1,1 @@
-A,E,4,None
-A,S,4,None
+i,i,2,3

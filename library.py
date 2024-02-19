@@ -3,6 +3,7 @@ class Library:
         self.file = open("books.txt", "a+", )
         self.year = None
         self.page = None
+        self.list = None
 
     def ListBooks(self):
         self.file.seek(0)
@@ -21,11 +22,9 @@ class Library:
         try:
             self.year = int(input("Enter year: "))
             self. page = int(input("Enter pages: "))
+            self.add_book = self.file.write(self.title + "," + self.author + "," + str(self.year) + "," + str(self.page) + "\n")
         except ValueError:
             print("Error: Please enter a valid numeric value for Year and Pages")
-
-
-        self.add_book = self.file.write(self.title + "," + self.author + "," + str(self.year) + "," + str(self.page) + "\n")
 
     def RemoveBook(self):
         self.remove_title = input("Book title: ")
